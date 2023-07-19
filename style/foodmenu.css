@@ -1,0 +1,19 @@
+.food_menu {
+     @apply px-10 pb-10;
+}
+
+.food_menu_header {
+     @apply text-3xl mb-8 font-extrabold;
+}
+.inside_food_menu_container {
+     @apply grid grid-cols-1 gap-y-5 gap-x-2 place-items-center sm:grid-cols-2 md:grid-cols-3;
+}
+
+.food_card_container {
+     @apply w-full h-[570px] bg-white rounded-3xl shadow-lg shadow-gray-800 transition-all duration-200 ease-in overflow-hidden bg-gradient-to-br from-gray-400 to-white md:w-[400px];
+
+}
+
+.food_card_container:hover {
+     @apply shadow-xl shadow-gray-900;
+}

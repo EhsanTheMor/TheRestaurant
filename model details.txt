@@ -1,0 +1,42 @@
+    Table Schema:
+        Table Number: A unique identifier for each table.
+        Seating Capacity: The maximum number of guests the table can accommodate.
+        Availability: A field to indicate whether the table is available for reservation or currently occupied.
+        Special Features: Any special features associated with the table (e.g., outdoor seating, window view).
+        Reservation: A reference to the reservation associated with the table (optional).
+
+    Food Schema:
+        Name: The name of the food item.
+        Description: A brief description or details about the food.
+        Price: The price of the food item.
+        Ingredients: A list of ingredients used in the food.
+        Image: An image URL representing the food item.
+        Category: A categorization of the food item (e.g., appetizer, main course, dessert).
+
+    Order Schema:
+        User: A reference to the user who placed the order.
+        Table: A reference to the table associated with the order.
+        Foods: An array of food items that the user has pre-ordered.
+        Total Price: The total price of the order.
+        Status: The current status of the order (e.g., pending, confirmed, delivered).
+        Timestamp: The timestamp indicating when the order was placed.
+
+    User Schema:
+        Name: The user's full name.
+        Email: The user's email address.
+        Password: A secure hash of the user's password.
+        Reservation: A reference to the reservation made by the user (optional).
+        Orders: An array of orders placed by the user.
+		
+		
+	// Table Schema
+{
+  tableNumber: { type: String, required: true },
+  seatingCapacity: { type: Number, required: true },
+  availability: { type: Boolean, default: true },
+  specialFeatures: [String],
+  reservation: [{
+    timeInterval: { type: String, required: true, enum: ['09:00-10:00', '10:00-11:00', ...] },
+    reserved: { type: Boolean, default: false }
+  }]
+}

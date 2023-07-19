@@ -1,0 +1,11 @@
+#go-to-start{
+     transition: all 200ms ease-in-out;
+}
+
+#go-to-start:hover{
+     height: 150px;
+}
+
+#go-to-start:hover > .hidden{
+     display: inline-block;
+}

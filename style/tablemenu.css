@@ -1,0 +1,24 @@
+.table_menu {
+     @apply px-10 pb-10;
+}
+
+.table_menu_header {
+     @apply text-xl text-center mb-8;
+}
+.inside_table_menu_container {
+     @apply grid grid-cols-2 gap-y-5 place-items-center;
+}
+
+.table_card_container {
+     @apply w-[570px] h-[288px] bg-white rounded-3xl shadow-lg shadow-gray-800 transition-all duration-200 ease-in;
+     @apply flex bg-gradient-to-bl from-gray-200 to-white overflow-hidden;
+}
+
+.table_card_container:hover {
+     @apply shadow-xl shadow-gray-900;
+}
+
+.table_card_image_container {
+     @apply grid place-items-center h-full w-1/2 relative;
+}
+

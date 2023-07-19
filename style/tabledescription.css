@@ -1,0 +1,13 @@
+.table_description {
+}
+
+.time_table {
+     @apply grid grid-cols-5 w-full border-black;
+     /* border: 2px solid; */
+}
+
+.time_table_btn {
+     @apply h-14 border-gray-300;
+     border: 1px solid;
+     transition: all ease-in 250ms;
+}

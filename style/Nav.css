@@ -1,0 +1,23 @@
+.div_container {
+     @apply h-20 px-10 flex items-center flex-shrink-0 bg-white;
+}
+
+.nav_list {
+     @apply flex mr-auto h-full items-center;
+}
+
+.nav_list_item {
+     @apply h-full px-5  flex items-center transition-all duration-200;
+}
+
+.nav_list_item:hover {
+     @apply cursor-pointer underline;
+}
+
+.nav_list_item-indicator {
+     @apply absolute right-2 top-1/2 -translate-y-full  w-5 h-5 rounded-full;
+     display: grid;
+     place-items: center;
+
+     background-color: rgba(203, 8, 8, 0.196);
+}

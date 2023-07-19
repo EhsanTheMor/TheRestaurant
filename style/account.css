@@ -1,0 +1,27 @@
+.account_list_item{
+     @apply text-xl mb-10 relative hover:cursor-pointer;
+
+}
+
+.heightlight{
+     @apply absolute bg-white z-0 -top-1/2 -right-1/4 -bottom-1/2 w-[125%] rounded-r-full;
+}
+
+.heightlight_upper_part{
+     @apply absolute left-0 -translate-y-full h-full aspect-square bg-white;
+}
+
+.heightlight_upper_part::before{
+     @apply absolute top-0 left-0 right-0 bottom-0 bg-[#3550FF] rounded-bl-full;
+     content: '';
+}
+
+.heightlight_lower_part{
+     @apply absolute left-0 translate-y-full h-full aspect-square bg-white;
+}
+
+.heightlight_lower_part::before{
+     @apply absolute top-0 left-0 right-0 bottom-0 bg-[#3550FF] rounded-tl-full;
+     content: '';
+}
+

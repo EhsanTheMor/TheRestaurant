@@ -88,13 +88,17 @@ export default function CartOrder({ order, bookTheTable }: Props) {
                          </div>
                     ))}
                </div>
-               <Button
-                    onClick={() => bookTheTable(order.id)}
-                    variant='contained'
-                    sx={{ fontFamily: 'Vazirmatn' }}
-                    className=' bg-slate-800  hover:bg-gray-900 w-48 text-white h-14 mx-auto block'>
-                    ثبت سفارش
-               </Button>
+
+               <div className="btn_holder flex justify-center">
+                    <Button
+                         onClick={() => bookTheTable(order.id)}
+                         variant='contained'
+                         color='info'
+                         sx={{ fontFamily: 'Vazirmatn' }}
+                         className='w-48 text-white h-14 block'>
+                         ثبت سفارش
+                    </Button>
+               </div>
           </div>
      );
 }

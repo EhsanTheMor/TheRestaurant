@@ -57,12 +57,14 @@ export default function Page() {
           <Protected>
                <div className='h-screen flex flex-col'>
                     <Nav />
+
                     <div className='rest bg-gray-200 p-10 flex-1'>
                          <div className='inner_cart_container overflow-auto p-5 h-full bg-white w-full m-auto  grid grid-cols-4 gap-5'>
 
                               {orders.length !== 0 ? (
                                    <>
                                         <div className='table_cart_container h-full col-span-3 flex flex-col gap-5 justify-between'>
+                                             {/* renders each table order if they exist */}
                                              {orders.map(order => (
                                                   <CartOrder
                                                        bookTheTable={bookTheTable}

@@ -9,7 +9,6 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { signOut, useSession } from 'next-auth/react';
-import axios from 'axios';
 import Link from 'next/link';
 
 export default function AccountMenu() {
@@ -39,6 +38,7 @@ export default function AccountMenu() {
                          </IconButton>
                     </Tooltip>
                </Box>
+
                <Menu
                     anchorEl={anchorEl}
                     id="account-menu"

@@ -8,6 +8,7 @@ async function getData(): Promise<TableType[]> {
      const res = await fetch('http://localhost:3000/api/table', {
           next: { revalidate: 60 },
      });
+
      const tablesData = await res.json();
      const tables: TableType[] = tablesData.tables.map(
           (item: any): TableType => {

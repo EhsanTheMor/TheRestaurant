@@ -17,14 +17,38 @@ export type FoodType = {
      updatedDate: Date;
 }
 
-export default async function FoodMenu() {
+async function getData(): Promise<FoodType[]> {
      const res = await fetch('http://localhost:3000/api/food', {
           next: { revalidate: 60 },
      });
-     const data = await res.json();
-     const foodList: FoodType[] = data.foods;
 
-     const list = [1, 2, 3, 4, 5];
+     const foodsData = await res.json();
+     const foods: FoodType[] = foodsData.foods.map(
+          (item: any): FoodType => {
+               const { _id, foodName, availability, category, createdDate, description, image, ingredients, price, priceDiscount, updatedDate } = item;
+
+               const newFood: FoodType = {
+                    _id,
+                    foodName,
+                    availability,
+                    category,
+                    createdDate,
+                    description,
+                    image,
+                    ingredients,
+                    price,
+                    priceDiscount,
+                    updatedDate,
+               };
+               return newFood;
+          },
+     );
+
+     return foods;
+}
+
+export default async function FoodMenu() {
+     const foodList = await getData();
 
      return (
           <div id='food_menu' className='food_menu'>

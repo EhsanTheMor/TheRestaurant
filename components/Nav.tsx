@@ -49,16 +49,7 @@ export default function Nav() {
 
                     {/* This is for the sign in and out. (conditional rendering) */}
                     {session ? (
-                         <>
-                              {/* <button
-                                   onClick={() => signOut()}
-                                   className='nav_list_item'
-                              >
-                                   خروج
-                              </button> */}
-
-                              <NavbarExitButton />
-                         </>
+                         <NavbarExitButton />
                     ) : (
                          <button
                               onClick={() => signIn()}

@@ -50,7 +50,7 @@ export default function FoodAddButtonOnFoodCard({ item }: Props) {
 
      return (
           <>
-               {/* Rendering a drop down list with material ui library */}
+               {/* Rendering a drop down list of already booked tables with material ui library */}
                {orders.length > 0 && (
                     <div className='table_selector row-start-4 grid grid-cols-5 gap-1'>
                          <FoodCardTitleFormControl activeOrderId={activeOrderId} setActiveOrderId={setActiveOrderId} />

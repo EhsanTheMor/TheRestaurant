@@ -5,6 +5,16 @@ import React from 'react'
 
 export default function TableCardMUIButton() {
      return (
-          <Button variant='contained' sx={{ fontSize: '20px', fontFamily: 'vazirmatn' }} fullWidth className='h-full bg-blue-600 '>مشاهده جزئیات</Button>
+          <Button
+               variant='contained'
+               sx={{
+                    fontSize: '20px',
+                    fontFamily: 'vazirmatn'
+               }}
+               fullWidth className='h-full'
+               color='info'
+          >
+               مشاهده جزئیات
+          </Button>
      )
 }
